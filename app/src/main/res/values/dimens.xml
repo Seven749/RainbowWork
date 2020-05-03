@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_phone">19sp</dimen>
+    <dimen name="login_password">19sp</dimen>
+    <dimen name="login_forget">14sp</dimen>
+    <dimen name="login_other">14sp</dimen>
+    <dimen name="facebook_text">18sp</dimen>
+    <dimen name="twitter_text">18sp</dimen>
+
+    <dimen name="home_title">18sp</dimen>
+
+    <dimen name="account_title">18sp</dimen>
+    <dimen name="nick_name">24sp</dimen>
+    <dimen name="address">18sp</dimen>
+
+    <dimen name="num">24sp</dimen>
+    <dimen name="text">18sp</dimen>
+
+</resources>

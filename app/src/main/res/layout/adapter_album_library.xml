@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_marginLeft="25dp"
+        android:id="@+id/album_pic_library"
+        android:layout_width="140dp"
+        android:layout_height="140dp"/>
+
+    <LinearLayout
+        android:layout_marginRight="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/album_name_library"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:maxLines="1"
+            android:text="Album Name"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/album_nick_name_library"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="40dp"
+            android:paddingLeft="30dp"
+            android:textSize="24sp"
+            android:textColor="@color/colorPrimary"
+            android:text="Nickname" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+package com.seven749.rainbowwork.music;
+
+import android.media.MediaPlayer;
+
+import java.io.IOException;
+
+/**
+ * @author 行云流水
+ * @date 2020/5/3
+ * @description
+ */
+public class ManagedMediaPlayer extends MediaPlayer implements MediaPlayer.OnCompletionListener {
+
+    public enum Status {
+        IDLE, INITIALIZED, STARTED, PAUSED, STOPPED, COMPLETED
+    }
+
+    private Status mState;
+
+    private OnCompletionListener mOnCompletionListener;
+
+    public ManagedMediaPlayer() {
+        super();
+        mState = Status.IDLE;
+        super.setOnCompletionListener(this);
+    }
+
+    @Override
+    public void reset() {
+        super.reset();
+        mState = Status.IDLE;
+    }
+
+    @Override
+    public void setDataSource(String path) throws IOException, IllegalArgumentException, SecurityException, IllegalStateException {
+        super.setDataSource(path);
+        mState = Status.INITIALIZED;
+    }
+
+    @Override
+    public void start() {
+        super.start();
+        mState = Status.STARTED;
+    }
+
+    @Override
+    public void setOnCompletionListener(MediaPlayer.OnCompletionListener listener) {
+        this.mOnCompletionListener = listener;
+    }
+
+    @Override
+    public void onCompletion(MediaPlayer mp) {
+        mState = Status.COMPLETED;
+        if (mOnCompletionListener != null) {
+            mOnCompletionListener.onCompletion(mp);
+        }
+    }
+
+    @Override
+    public void stop() throws IllegalStateException {
+        super.stop();
+        mState = Status.STOPPED;
+    }
+
+    @Override
+    public void pause() throws IllegalStateException {
+        super.pause();
+        mState = Status.PAUSED;
+    }
+
+    public void setState(Status mState) {
+        this.mState = mState;
+    }
+
+    public Status getState() {
+        return mState;
+    }
+
+    public boolean isComplete() {
+        return mState == Status.COMPLETED;
+    }
+
+}
+

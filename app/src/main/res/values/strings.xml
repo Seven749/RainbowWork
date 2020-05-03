@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">RainbowWork</string>
+    <string name="input_phone">Please input phone num</string>
+    <string name="input_password">Please input password</string>
+    <string name="forget_password">Forgot your password?</string>
+    <string name="sign_with_other">Sign with a social account</string>
+    <string name="facebook">Login with Facebook</string>
+    <string name="twitter">Login with Twitter</string>
+
+    <string name="home">Home</string>
+    <string name="library">Library</string>
+    <string name="account">Account</string>
+
+    <string name="account_title">Profile</string>
+    <string name="nickName">Barbara Andrews</string>
+    <string name="address">Chongqing</string>
+    <string name="followeds_num">1000</string>
+    <string name="followeds">followers</string>
+    <string name="eventCount_num">486</string>
+    <string name="eventCount">posts</string>
+    <string name="follows_num">200</string>
+    <string name="follows">following</string>
+</resources>

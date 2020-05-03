@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0091EA</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="loginBackground">#FFFFFF</color>
+    <color name="forgetPassword">#758692</color>
+    <color name="loginBottom">#F7F8FA</color>
+    <color name="signWithOther">#758692</color>
+    <color name="facebookText">#FFFFFF</color>
+    <color name="twitterText">#FFFFFF</color>
+
+    <color name="homeBackground">#FFFFFF</color>
+    <color name="homeTitle">#000000</color>
+
+
+    <color name="accountTitle">#FFFFFF</color>
+    <color name="accountBackground">#FFFFFF</color>
+    <color name="nickName">#000000</color>
+    <color name="address">#878787</color>
+    <color name="num">#000000</color>
+    <color name="text">#878787</color>
+</resources>
