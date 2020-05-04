@@ -8,10 +8,12 @@ package com.seven749.rainbowwork.bean;
 public class AlbumProgramItemBean {
     private String id;
     private String name;
+    private String picUrl;
 
-    public AlbumProgramItemBean(String id, String name) {
+    public AlbumProgramItemBean(String id, String name, String picUrl) {
         this.id = id;
         this.name = name;
+        this.picUrl = picUrl;
     }
 
     public String getId() {
@@ -20,5 +22,9 @@ public class AlbumProgramItemBean {
 
     public String getName() {
         return name;
+    }
+
+    public String getPicUrl() {
+        return picUrl;
     }
 }

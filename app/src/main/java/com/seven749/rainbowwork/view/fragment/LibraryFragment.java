@@ -14,6 +14,7 @@ import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -61,7 +62,8 @@ public class LibraryFragment extends BaseFragment<LibraryContract.Presenter> imp
             refresh();
         });
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view_library);
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(context);
+        recyclerView.setLayoutManager(layoutManager);
         albumAdapter = new AlbumItemAdapter(context, albumItemList);
         recyclerView.setAdapter(albumAdapter);
         getAlbumList();

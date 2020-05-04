@@ -1,13 +1,10 @@
 package com.seven749.rainbowwork.view.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -72,6 +69,7 @@ public class LoginActivity extends BaseActivity<LoginContract.Presenter> impleme
     protected void onDestroy() {
         super.onDestroy();
         SharedPreferences.Editor editor = getSharedPreferences("loginInfo", MODE_PRIVATE).edit();
+        editor.putString("id", App.id);
         editor.putBoolean("isLogin", App.isLogin);
         editor.putString("token", App.token);
         editor.putString("nickname", App.nickname);
